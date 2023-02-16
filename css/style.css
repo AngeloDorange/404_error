@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    letter-spacing: 1px;
+    font-family: "Poppins", sans-serif;
+}
+.container{
+    background: cornflowerblue;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../img/slide-01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    overflow: hidden;
+    padding: 0 50px;
+}
+.contents{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    min-height: 100vh;
+}
+.part-1{
+    max-width: 60%;
+    height: 100%;
+    color: #fff;
+    font-weight: 900;
+    flex: 1;
+}
+.part-1 .title h4{
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 10px;
+    position: relative;
+}
+.part-1 .title h4::after{
+    position: absolute;
+    content: "";
+    background-color: rgb(11, 199, 20);
+    width: 80px;
+    height: 2px;
+    display: inline-block;
+    margin:10px;
+}
+.title h1{
+    font-size: 3rem;
+}
+.letter p{
+    padding-top: 15px;
+    text-align: justify;
+    color: rgba(255,255,255,0.5);
+    font-size: 1.1rem;
+    line-height: 2;
+}
+.form{
+    padding-top: 1.5rem;
+}
+.timer{
+    padding: 1.5rem 0;
+}
+#flipdown{
+    font-size: 50%;
+}
+form{
+    display: flex;
+}
+form input{
+    border: none;
+    padding: 10px;
+    width: 70%;
+    background-color: rgba(255,255,255,0.5);
+    font-size: 1rem;
+    color: #fff;
+    caret-color: blueviolet;
+}
+input:focus{
+    outline-width: 0;
+    outline: none;
+    box-shadow: none;
+}
+input::placeholder{
+    color: #fff;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+form button{
+    background: rgb(11, 199, 20);
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 10px 30px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    width: max-content;
+    transition: .7s ease-in;
+    -webkit-transition: .7s ease-in;
+    -moz-transition: .7s ease-in;
+    -ms-transition: .7s ease-in;
+    -o-transition: .7s ease-in;
+}
+
+.flipdown.flipdown__theme-dark .rotor-group-heading:before {
+    color: #fff;
+}
+.flipdown.flipdown__theme-dark .rotor, .flipdown.flipdown__theme-dark .rotor-top, .flipdown.flipdown__theme-dark .rotor-leaf-front {
+    color: rgb(11, 199, 20);
+    background-color: #fff;
+}
+.flipdown.flipdown__theme-dark .rotor-bottom, .flipdown.flipdown__theme-dark .rotor-leaf-rear {
+    color: rgb(11, 199, 20);
+    background-color: #fff;
+}
+.flipdown.flipdown__theme-dark .rotor-group:nth-child(n+2):nth-child(-n+3):before, .flipdown.flipdown__theme-dark .rotor-group:nth-child(n+2):nth-child(-n+3):after {
+    background-color: #fff;
+}
+.flipdown.flipdown__theme-dark .rotor:after {
+    border-top: solid 1px #fff;
+}
+
+
+
+footer{
+    position: relative;
+}
+
+#footer .social-links{
+    position: fixed;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+}
+
+#footer .social-links .medi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: 0.7s ease-in;
+    -webkit-transition: 0.7s ease-in;
+    -moz-transition: 0.7s ease-in;
+    -ms-transition: 0.7s ease-in;
+    -o-transition: 0.7s ease-in;
+}
+#footer .social-links .medi:hover{
+    color: rgb(11, 199, 20);
+}
+
+.credit{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0 50px;
+}
+.credit p{
+    color: #fff;
+}
+
+
+@media (max-width: 1040px){
+    .container{
+        padding: 0px 20px;
+        height: auto;
+    }
+    .part-1{
+        max-width: 70%;
+    }
+    .title h1{
+        font-size: 2.2rem;
+    }
+    .letter p{
+        font-size: 1rem;
+    }
+    #footer .social-links{
+        right: 1rem;
+    }
+}
+
+
+@media (max-width: 600px){
+    .container{
+        padding: 40px 20px;
+    }
+    .part-1{
+        max-width: 85%;
+    }
+    .part-1 .title h4::after{
+        width: 50px;
+    }
+    .title h1{
+        font-size: 1.7rem;
+    }
+    form{
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+    form input, form button{
+        width: 100%;
+    }
+    #footer .social-links .medi{
+        font-size: 1.5rem;
+    }
+    .credit{
+        padding: 0 20px;
+        bottom: 0;
+    }
+}
